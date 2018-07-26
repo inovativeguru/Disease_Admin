@@ -1,7 +1,8 @@
 export default {
 login:{
 	successMessage : "User Successfully Found",
-	errorMessage : "No Data Found"
+	errorMessage : "No Data Found",
+	wrongpassword : "Wrong Password" 
 },
 signup:{
 	successMessage : "User Successfully Regitered",

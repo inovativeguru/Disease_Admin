@@ -20,6 +20,7 @@ export default (req,res)=>{
 			res.json({status : false,message : staticConfig.signup.errorMessage});
 		}
 		else{
+			console.log("Successfully Registered",data);
 			res.json({status : true,message : staticConfig.signup.successMessage,userdata : data});
 		}
 

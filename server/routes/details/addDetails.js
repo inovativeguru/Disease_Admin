@@ -1,14 +1,11 @@
 import express from 'express';
-import diseasedata from '../../model/register_schema';
+import diseasedata from '../../model/location_schema';
 import staticConfig from '../../config/staticConfig';
 
 export default (req,res) =>{
-	let info = {};
+		let info = req.body;
 
-	diseasedata.insertMany({
-		info.question = req.body.question,
-		info.answer = req.body.answer
-	},(err,data)=>{
+		diseasedata.updateMany({},{ $addToSet : {	diseaseinfo: info} },{ upsert : true },(err,data)=>{
 		if(err){
 			res.json({status : false ,message : staticConfig.addDetails.errorMessage});
 		}
@@ -16,7 +13,18 @@ export default (req,res) =>{
 			res.json({status : false ,message : staticConfig.addDetails.errorMessage});
 		}
 		else{
-			res.json({status : true ,message : staticConfig.addDetails.successMessage, data: data});
+			diseasedata.findOne((error,result)=>{
+				if(error){
+					res.json({status : false ,message : staticConfig.addDetails.errorMessage});
+				}
+				else if(result==undefined)
+				{
+					res.json({status : false ,message : staticConfig.addDetails.errorMessage});
+				}
+				else{
+					res.json({status : true ,message : staticConfig.addDetails.successMessage, data: result});
+				}			
+			})
 		}
 	});
 };

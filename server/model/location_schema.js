@@ -3,11 +3,7 @@ mongoose.set('debug',true);
 let Schema=mongoose.Schema;
 
 let location=new Schema({
- name:String,
- username:{type:String},
- contact_no:{type:Number, unique:true},
- email:{type:String, unique:true},
- password:String
+ diseaseinfo: []
 },{collection:'citylocation',versionKey: false});
 
 let location_model= mongoose.model('citylocation',location);

@@ -3,7 +3,7 @@ import register from '../../model/register_schema';
 import staticConfig from '../../config/staticConfig';
 
 export default (req,res)=>{
-	register.find({email: req.body.email},(error,data)=>{console.log("email",req.body)
+	register.findOne({email: req.body.email},(error,data)=>{
 
 		if(error){
 			res.json({status : false ,message : staticConfig.login.errorMessage});
@@ -11,10 +11,18 @@ export default (req,res)=>{
 		else if(data==undefined){
 			res.json({status : false,message : staticConfig.login.errorMessage});
 		}
-		else{
-			res.json({status : true,message : staticConfig.login.successMessage,userdata : data});
+		else if(!data){
+			res.json({status : false,message : staticConfig.login.errorMessage});
 		}
-
-	})
-
+		else{
+			data.comparePassword(req.body.password, (err, isMatch) => {
+			if (isMatch) {
+				res.json({status: true, message: staticConfig.login.sucessMessage,userdata : data});
+			}
+			else {
+				res.json({status: false, message: staticConfig.login.wrongpassword,userdata : null});
+			}
+			});
+		}
+})
 }

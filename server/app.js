@@ -6,8 +6,8 @@ import cookieParser from 'cookie-parser';
 import bodyParser from 'body-parser';
 import mongoose from 'mongoose';
 
-import index from './routes/index';
-import users from './routes/users';
+import signup from './routes/signup';
+import details from './routes/details';
 import login from './routes/login';
 
 import config from './config/config';
@@ -28,8 +28,8 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(cors());
 
-app.use('/', index);
-app.use('/users', users);
+app.use('/signup', signup);
+app.use('/details', details);
 app.use('/login',login);
 
 mongoose.connect(config.url);
