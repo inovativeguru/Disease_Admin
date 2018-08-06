@@ -8,22 +8,22 @@ export default (req,res) =>{
 		location_schema.updateMany({},{ $addToSet : {	locationData: location} },{ upsert : true },(err,data)=>{
 			console.log("Here ",location);
 		if(err){
-			res.json({status : false ,message : ""});
+			res.json({status : false ,message : staticConfig.addLocation.errorMessage });
 		}
 		else if(data==undefined){
-			res.json({status : false ,message :"" });
+			res.json({status : false ,message : staticConfig.addLocation.errorMessage });
 		}
 		else{
 			location_schema.findOne((error,result)=>{
 				if(error){
-					res.json({status : false ,message : ""});
+					res.json({status : false ,message : staticConfig.addLocation.errorMessage });
 				}
 				else if(result==undefined)
 				{
-					res.json({status : false ,message : ""});
+					res.json({status : false ,message : staticConfig.addLocation.errorMessage });
 				}
 				else{
-					res.json({status : true ,message : "", data: result});
+					res.json({status : true ,message : staticConfig.addLocation.successMessage, data: result});
 				}			
 			})
 		}

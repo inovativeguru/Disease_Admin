@@ -12,6 +12,10 @@ addDetails:{
 	successMessage : "Successfully Added New Details",
 	errorMessage : "Error while inserting Details "
 },
+addLocation:{
+	successMessage : "Successfully Added New Location",
+	errorMessage : "Error while inserting Location "
+},
 suggestions:{
 	successMessage : "Successfully Retrieved Suggestions",
 	errorMessage : "Error while Retrieved Suggestions"

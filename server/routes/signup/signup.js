@@ -11,8 +11,6 @@ export default (req,res)=>{
 			email: req.body.email,
 			password: req.body.password,
 		},(error,data)=>{
-			console.log("In signup",req.body)
-
 		if(error){
 			res.json({status : false ,message : staticConfig.signup.errorMessage});
 		}
@@ -20,7 +18,6 @@ export default (req,res)=>{
 			res.json({status : false,message : staticConfig.signup.errorMessage});
 		}
 		else{
-			console.log("Successfully Registered",data);
 			res.json({status : true,message : staticConfig.signup.successMessage,userdata : data});
 		}
 

@@ -4,7 +4,7 @@ let Schema=mongoose.Schema;
 
 let data=new Schema({
  diseaseinfo: []
-},{collection:'citylocation',versionKey: false});
+},{collection:'disease_info',versionKey: false});
 
 let disease_data= mongoose.model('diseasedata',data);
 
