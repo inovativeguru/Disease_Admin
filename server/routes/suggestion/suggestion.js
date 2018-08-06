@@ -4,7 +4,7 @@ import staticConfig from '../../config/staticConfig';
 
 export default (req,res) =>{
 
-	suggestion.find((err,data)=>{
+	suggestion.findOne((err,data)=>{
 		if(err){
 			res.json({status : false ,message : staticConfig.suggestions.errorMessage});
 		}

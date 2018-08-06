@@ -11,13 +11,15 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { SetlocationComponent } from './setlocation/setlocation.component';
 import { DetailsComponent } from './details/details.component';
+import { FeedbackComponent } from './feedback/feedback.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     SetlocationComponent,
-    DetailsComponent
+    DetailsComponent,
+    FeedbackComponent
   ],
   imports: [
     BrowserModule,

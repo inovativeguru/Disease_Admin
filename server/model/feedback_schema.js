@@ -6,6 +6,6 @@ let feedback=new Schema({
  feedbackData: []
 },{collection:'userfeedback',versionKey: false});
 
-let feedback= mongoose.model('userfeedback',location);
+let feedback_data= mongoose.model('userfeedback',feedback);
 
-module.exports =  feedback;
+module.exports =  feedback_data;
