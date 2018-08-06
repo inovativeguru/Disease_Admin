@@ -9,18 +9,17 @@ import { LoginService } from './login.service';
 })
 export class LoginComponent implements OnInit {
 
+  data:any={};
   constructor( private loginservice : LoginService ) { }
 
   ngOnInit() {
   }
 
-  login(email,password){
-  	let data:any={};
-  	data.email=email;
-  	data.password=password;
-  	this.loginservice.login(data)
+  login(){
+    console.log("data",this.data)
+  	this.loginservice.login(this.data)
   	.subscribe((res)=>{
-  		
+
   	})
   }
 

@@ -1,5 +1,5 @@
 import express from 'express';
-import diseasedata from '../../model/location_schema';
+import diseasedata from '../../model/disease_data';
 import staticConfig from '../../config/staticConfig';
 
 export default (req,res) =>{

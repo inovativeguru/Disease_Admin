@@ -1,0 +1,53 @@
+
+
+
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <form action="action_page.php">
+
+      <div class="container">
+        <label for="Question"><b>Question</b></label>
+        <input type="text" placeholder="Question"  [(ngModel)]="data.question" name="Question" required>
+
+        <label for="Answer"><b>Answer</b></label>
+        <input type="Answer" placeholder=" Type your Answer" [(ngModel)]="data.answer" name="Answer" required>
+
+        <input type="submit" name="submit" (click)="detail()"  value="Submit">
+      </div>
+
+    </form>
+  </div>
+</div>
+
+
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+
+<div class="displayResults" *ngIf="dataResult">
+  <div class="container">
+    <div class="row">
+      <br/>
+      
+        
+      
+      <div class="panel panel-primary">
+      <h4>Questions</h4>
+        <div class="panel-heading" *ngFor="let val of dataResult let i of index" >                  
+         <pre>
+            {{val.question}} 
+         </pre>
+        </div><!--.panel-heading-->
+        <div class = "panel-body" *ngFor="let val of dataResult let i=index">
+        <h4>Answer</h4>
+        {{val.answer}}
+
+
+        <div class="panel-footer">
+
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+</div>
+
+

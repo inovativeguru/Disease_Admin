@@ -9,6 +9,7 @@ import mongoose from 'mongoose';
 import signup from './routes/signup';
 import details from './routes/details';
 import login from './routes/login';
+import location from './routes/location';
 
 import config from './config/config';
 let cors=require('cors');
@@ -31,6 +32,7 @@ app.use(cors());
 app.use('/signup', signup);
 app.use('/details', details);
 app.use('/login',login);
+app.use('/location',location);
 
 mongoose.connect(config.url);
 mongoose.connection.on('connected',()=>{

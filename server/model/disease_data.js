@@ -2,10 +2,10 @@ const mongoose = require('mongoose');
 mongoose.set('debug',true);
 let Schema=mongoose.Schema;
 
-let location=new Schema({
- locationData: []
+let data=new Schema({
+ diseaseinfo: []
 },{collection:'citylocation',versionKey: false});
 
-let location_model= mongoose.model('citylocation',location);
+let disease_data= mongoose.model('diseasedata',data);
 
-module.exports =  location_model;
+module.exports =  disease_data;
