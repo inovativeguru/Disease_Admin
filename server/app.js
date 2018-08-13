@@ -6,9 +6,9 @@ import cookieParser from 'cookie-parser';
 import bodyParser from 'body-parser';
 import mongoose from 'mongoose';
 
-import signup from './routes/signup';
+import user from './routes/user';
 import details from './routes/details';
-import login from './routes/login';
+import admin from './routes/admin';
 import location from './routes/location';
 import suggestion from './routes/suggestion'
 
@@ -30,9 +30,9 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(cors());
 
-app.use('/signup', signup);
+app.use('/user', user);
+app.use('/admin',admin);
 app.use('/details', details);
-app.use('/login',login);
 app.use('/location',location);
 app.use('/suggestion',suggestion);
 

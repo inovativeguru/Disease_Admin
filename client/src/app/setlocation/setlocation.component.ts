@@ -29,8 +29,10 @@ export class SetlocationComponent implements OnInit {
 	public userSettings2: any = {
 		showRecentSearch: false,
 		geoCountryRestriction: ['in'],
+		// resOnSearchButtonClickOnly: true,
 		searchIconUrl: 'http://downloadicons.net/sites/default/files/identification-search-magnifying-glass-icon-73159.png',
-		geoTypes: ['establishment']
+		// geoTypes: ['establishment'],
+		recentStorageName: 'componentData2'
 	};
 
 	autoCompleteCallback2(data: any): any {
@@ -48,9 +50,9 @@ export class SetlocationComponent implements OnInit {
 	}
 
 
-	onChoseLocation(event){
-		console.log("Event",event);
-		this.latitude=event.coords.lat;
-		this.lngitude=event.coords.lng;
-	}
+	// onChoseLocation(event){
+	// 	console.log("Event",event);
+	// 	this.latitude=event.coords.lat;
+	// 	this.lngitude=event.coords.lng;
+	// }
 }

@@ -5,19 +5,31 @@ login:{
 	wrongpassword : "Wrong Password" 
 },
 signup:{
-	successMessage : "User Successfully Regitered",
-	errorMessage : "Error while Registering User"
+	successMessage : "Successfully regitered",
+	errorMessage : "Error while registering"
 },
 addDetails:{
-	successMessage : "Successfully Added New Details",
+	successMessage : "Successfully added new Details",
 	errorMessage : "Error while inserting Details "
 },
+getDetails:{
+	successMessage : "Successfully retrieved Details",
+	errorMessage : "Error while retrieving Details "
+},
 addLocation:{
-	successMessage : "Successfully Added New Location",
+	successMessage : "Successfully added new Location",
 	errorMessage : "Error while inserting Location "
 },
-suggestions:{
-	successMessage : "Successfully Retrieved Suggestions",
-	errorMessage : "Error while Retrieved Suggestions"
+getLocation:{
+	successMessage : "Successfully retrieved Location",
+	errorMessage : "Error while retrieving Location "
+},
+addSuggestions:{
+	successMessage : "Successfully added new Suggestions",
+	errorMessage : "Error while inserting Suggestions "
+},
+getSuggestions:{
+	successMessage : "Successfully retrieved Suggestions",
+	errorMessage : "Error while retrieving Suggestions"
 }
 }

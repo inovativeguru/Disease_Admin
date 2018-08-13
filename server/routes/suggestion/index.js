@@ -1,10 +1,10 @@
 import express from 'express';
-import suggestion from './suggestion';
+import getsuggestion from './getsuggestion';
 import addsuggestion from './addsuggestion';
 
 let router = express.Router();
 
-router.get('/',suggestion);
+router.get('/',getsuggestion);
 router.put('/',addsuggestion);
 
 export default router;

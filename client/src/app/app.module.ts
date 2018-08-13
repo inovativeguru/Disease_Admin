@@ -26,10 +26,10 @@ import { FeedbackComponent } from './feedback/feedback.component';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-    AgmCoreModule.forRoot({
+    // AgmCoreModule.forRoot({
       // apiKey: 'AIzaSyD3Pxz8wa816EY5id0uRjA6WC0k2uLE7Ow',
-      libraries: ["places"]
-    }),
+    //   libraries: ["places"]
+    // }),
     Ng4GeoautocompleteModule.forRoot(),
     AgmDirectionModule
   ],

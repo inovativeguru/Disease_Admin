@@ -1,2 +1,7 @@
 /client/node_modules
 /server/node_modules
+/user_client/node_modules
+/user_client/platforms/ios
+/user_client/platforms/android
+
+

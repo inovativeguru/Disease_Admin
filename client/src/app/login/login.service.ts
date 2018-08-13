@@ -12,7 +12,7 @@ export class LoginService {
   constructor(private httpclient:HttpClient) { }
 
   login(data):Observable<any>{
-  	let url:string="http://localhost:3000/login"
+  	let url:string="http://localhost:3000/user/login"
   	return this.httpclient.put(url,data)
   	.map((res:Response)=>res);
   }

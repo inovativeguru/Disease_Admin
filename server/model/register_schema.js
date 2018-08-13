@@ -9,7 +9,7 @@ let register=new Schema({
  email: {type: String, unique: true},
  password: String,
  status: Boolean,
- type: String
+ usertype: {type:String,required:true}
 },{collection:'registereduser',versionKey: false});
 
 register.methods.comparePassword = function(pw, cb) { 
